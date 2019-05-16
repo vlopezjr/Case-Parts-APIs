@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{71145D0B-996D-47B5-891F-4269FCE0245D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CreateCustomer.API</RootNamespace>
+    <AssemblyName>CreateCustomer.API</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contracts\IAddressRepository.cs" />
+    <Compile Include="Contracts\IAsyncRepository.cs" />
+    <Compile Include="Contracts\IBranchRepository.cs" />
+    <Compile Include="Contracts\IBusinessFormRepository.cs" />
+    <Compile Include="Contracts\ICCTransactionRepository.cs" />
+    <Compile Include="Contracts\IContactRepository.cs" />
+    <Compile Include="Contracts\ICountryRepository.cs" />
+    <Compile Include="Contracts\ICPSalesOrderRepository.cs" />
+    <Compile Include="Contracts\ICreditCardTypeRepository.cs" />
+    <Compile Include="Contracts\ICustAddressRepository.cs" />
+    <Compile Include="Contracts\ICustClassRepository.cs" />
+    <Compile Include="Contracts\ICustHoldRepository.cs" />
+    <Compile Include="Contracts\ICustomerRepository.cs" />
+    <Compile Include="Contracts\ICustPaymentRepository.cs" />
+    <Compile Include="Contracts\ICustStatusRepository.cs" />
+    <Compile Include="Contracts\IDocTransmittalRepository.cs" />
+    <Compile Include="Contracts\IGroupRepository.cs" />
+    <Compile Include="Contracts\IInvoiceRepository.cs" />
+    <Compile Include="Contracts\IMemoRemarkRepository.cs" />
+    <Compile Include="Contracts\INationalAccountLevelRepository.cs" />
+    <Compile Include="Contracts\INationalAccountRepository.cs" />
+    <Compile Include="Contracts\IPaymentTermsRepository.cs" />
+    <Compile Include="Contracts\IRepository.cs" />
+    <Compile Include="Contracts\ISalesOrderRepository.cs" />
+    <Compile Include="Contracts\ISalesSourceRepository.cs" />
+    <Compile Include="Contracts\ISalesTerritoryRepository.cs" />
+    <Compile Include="Contracts\IShipmentRepository.cs" />
+    <Compile Include="Contracts\IShipMethodRepository.cs" />
+    <Compile Include="Contracts\IStatementCycleRepository.cs" />
+    <Compile Include="Contracts\IStateRepository.cs" />
+    <Compile Include="Contracts\ITaxScheduleRepository.cs" />
+    <Compile Include="Contracts\ITaxSubjClass.cs" />
+    <Compile Include="Contracts\ITerritoryRepository.cs" />
+    <Compile Include="Contracts\IUserRepository.cs" />
+    <Compile Include="DomainServices\ARResearchService.cs" />
+    <Compile Include="DomainServices\CustomerService.cs" />
+    <Compile Include="DomainServices\LookUpService.cs" />
+    <Compile Include="DomainServices\SalesOrderService.cs" />
+    <Compile Include="Entities\Address.cs" />
+    <Compile Include="Entities\BaseEntity.cs" />
+    <Compile Include="Entities\Batch.cs" />
+    <Compile Include="Entities\Branch.cs" />
+    <Compile Include="Entities\BusinessForm.cs" />
+    <Compile Include="Entities\CCTransaction.cs" />
+    <Compile Include="Entities\Contact.cs" />
+    <Compile Include="Entities\Country.cs" />
+    <Compile Include="Entities\CPSalesOrder.cs" />
+    <Compile Include="Entities\CPSOLine.cs" />
+    <Compile Include="Entities\CreditCard.cs" />
+    <Compile Include="Entities\CreditCardType.cs" />
+    <Compile Include="Entities\CustAddress.cs" />
+    <Compile Include="Entities\CustClass.cs" />
+    <Compile Include="Entities\CustHold.cs" />
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\CustomerContext.cs" />
+    <Compile Include="Entities\CustPayment.cs" />
+    <Compile Include="Entities\CustStatus.cs" />
+    <Compile Include="Entities\DocTransmittal.cs" />
+    <Compile Include="Entities\Group.cs" />
+    <Compile Include="Entities\GroupMember.cs" />
+    <Compile Include="Entities\Invoice.cs" />
+    <Compile Include="Entities\InvoiceShipment.cs" />
+    <Compile Include="Entities\Memo.cs" />
+    <Compile Include="Entities\NationalAccount.cs" />
+    <Compile Include="Entities\NationalAccountLevel.cs" />
+    <Compile Include="Entities\PaymentTerms.cs" />
+    <Compile Include="Entities\SalesOrder.cs" />
+    <Compile Include="Entities\SalesSource.cs" />
+    <Compile Include="Entities\SalesTerritory.cs" />
+    <Compile Include="Entities\ShipLine.cs" />
+    <Compile Include="Entities\ShipLineDistFreightBalance.cs" />
+    <Compile Include="Entities\Shipment.cs" />
+    <Compile Include="Entities\ShipmentBatch.cs" />
+    <Compile Include="Entities\ShipmentCheck.cs" />
+    <Compile Include="Entities\ShipmentFreightBalance.cs" />
+    <Compile Include="Entities\ShipMethod.cs" />
+    <Compile Include="Entities\SOLine.cs" />
+    <Compile Include="Entities\State.cs" />
+    <Compile Include="Entities\StatementCycle.cs" />
+    <Compile Include="Entities\TaxCode.cs" />
+    <Compile Include="Entities\TaxExemptionCPC.cs" />
+    <Compile Include="Entities\TaxExemptionAcuity.cs" />
+    <Compile Include="Entities\TaxSchedule.cs" />
+    <Compile Include="Entities\TaxSubjClass.cs" />
+    <Compile Include="Entities\Territory.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\Vendor.cs" />
+    <Compile Include="Entities\VendorAddress.cs" />
+    <Compile Include="Enums\CustAddrType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AddressRepository.cs" />
+    <Compile Include="Repositories\BatchRepository.cs" />
+    <Compile Include="Repositories\BranchRepository.cs" />
+    <Compile Include="Repositories\BusinessFormRepository.cs" />
+    <Compile Include="Repositories\CCTransactionRepository.cs" />
+    <Compile Include="Repositories\ContactRepository.cs" />
+    <Compile Include="Repositories\CountryRepository.cs" />
+    <Compile Include="Repositories\CPSalesOrderRepository.cs" />
+    <Compile Include="Repositories\CreditCardRepository.cs" />
+    <Compile Include="Repositories\CreditCardTypeRepository.cs" />
+    <Compile Include="Repositories\CustAddressRepository.cs" />
+    <Compile Include="Repositories\CustClassRepository.cs" />
+    <Compile Include="Repositories\CustHoldRepository.cs" />
+    <Compile Include="Repositories\CustomerRepository.cs" />
+    <Compile Include="Repositories\CustPaymentRepository.cs" />
+    <Compile Include="Repositories\CustStatusRepository.cs" />
+    <Compile Include="Repositories\DocTransmittalRepository.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
+    <Compile Include="Repositories\GroupRepository.cs" />
+    <Compile Include="Repositories\InvoiceRepository.cs" />
+    <Compile Include="Repositories\MemoRemarkRepository.cs" />
+    <Compile Include="Repositories\NationalAccountRepository.cs" />
+    <Compile Include="Repositories\NationalAccountLevelRepository.cs" />
+    <Compile Include="Repositories\PaymentTermsRepository.cs" />
+    <Compile Include="Repositories\SalesOrderRepository.cs" />
+    <Compile Include="Repositories\SalesSourceRepository.cs" />
+    <Compile Include="Repositories\SalesTerritoryRepository.cs" />
+    <Compile Include="Repositories\ShipmentBatchRepository.cs" />
+    <Compile Include="Repositories\ShipmentRepository.cs" />
+    <Compile Include="Repositories\ShipMethodRepository.cs" />
+    <Compile Include="Repositories\StatementCycleRepository.cs" />
+    <Compile Include="Repositories\StateRepository.cs" />
+    <Compile Include="Repositories\TaxScheduleRepository.cs" />
+    <Compile Include="Repositories\TaxSubjClassRepository.cs" />
+    <Compile Include="Repositories\TerritoryRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

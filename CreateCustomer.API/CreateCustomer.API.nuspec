@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Victor Lopez</authors>
+    <owners>Victor Lopez</owners>
+    <licenseUrl>https://caseparts.pkgs.visualstudio.com</licenseUrl>    <projectUrl>https://caseparts.pkgs.visualstudio.com/_packaging/CustomerAPI/nuget/v3/index.json</projectUrl>
+    <iconUrl>https://caseparts.pkgs.visualstudio.com/</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Case Parts API for Customer Management</description>
+    <releaseNotes>CP Customer Management API</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>caseparts</tags>
+  </metadata>
+</package>
